@@ -1,7 +1,6 @@
 import React from 'react'
 import PageNotFound from '@/app/components/PageNotFound'
 import Link from 'next/link'
-import Image from 'next/image'
 
 async function getChapter(id: string) {
   try {
@@ -20,7 +19,6 @@ async function getChapter(id: string) {
 
 const Page = async ({ params }: {params: { chapterId: string } }) => {
   const chapter = await getChapter(params.chapterId);
-
   const renderNavigateButtons = (chapterId: number) => {
     if (chapterId === 1) {
       return (
@@ -67,7 +65,7 @@ const Page = async ({ params }: {params: { chapterId: string } }) => {
             </div>
             {chapter.content.split("\n").map((content: string, idx: number) => {
               return (
-                  <p className="mt-6 indent-4 leading-8 tracking-wider text-slate-800" key={idx}>{content}</p>
+                  <p className="mt-6 indent-4 leading-8 tracking-wider text-slate-800 text-justify" key={idx}>{content}</p>
               )
             })}
           </div>

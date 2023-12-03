@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 import ChapterLists from './components/ChapterLists'
 
 const Page = () => {
-  const offsetList = Array.from({ length: 86 }, (_, index) => index)
+  const offsetList = Array.from({ length: 307 }, (_, index) => index)
   const [offset, setOffset] = useState(0)
 
   return (
     <div className="m-4 text-center">
       <h1 className="text-3xl font-bold">Private Novel Reader</h1>
-      <p className="text-xs mt-8">Please select a chapter to read from 开局签到荒古圣体</p>
+      <p className="text-xs mt-8">Please select a chapter to read</p>
 
       <select onChange={(evt) => setOffset(parseInt(evt.target.value))} id="page" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full mt-4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         {
